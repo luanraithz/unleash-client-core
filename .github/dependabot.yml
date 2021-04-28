@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Microsoft.Net.Compilers
+    versions:
+    - 3.8.0
+  - dependency-name: Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel
+    versions:
+    - 2.16.0
